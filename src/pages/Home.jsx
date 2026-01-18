@@ -1,10 +1,10 @@
 import React from "react";
-import { businesses } from "../data/business";
-import BusinessCard from "../components/BusinessCard";
 import { Award, Heart, Users } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import heroPic from "../assets/ibu_warda.jpeg";
+import BusinessCard from "../components/BusinessCard";
+import stifinPic from "../assets/stifin.png";
 
 const Home = () => {
   return (
@@ -25,29 +25,6 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repellat, quis earum dignissimos
                 consequuntur incidunt dolorum hic a ducimus laudantium.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-md">
-                  <Award className="w-6 h-6 text-green-600" />
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">8+</div>
-                    <div className="text-sm text-gray-600">Tahun Pengalaman</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-md">
-                  <Users className="w-6 h-6 text-green-600" />
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">15K+</div>
-                    <div className="text-sm text-gray-600">Pelanggan Puas</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-md">
-                  <Heart className="w-6 h-6 text-green-600" />
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">3</div>
-                    <div className="text-sm text-gray-600">Bisnis Aktif</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="relative">
@@ -68,20 +45,20 @@ const Home = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Bisnis Kami</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tiga bisnis yang dibangun dengan cinta, dedikasi, dan komitmen untuk memberikan yang terbaik bagi setiap
-              pelanggan
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Bisnis Saya</h2>
+            <p className="text-md font-medium text-gray-600 max-w-2xl mx-auto">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim sunt porro, fugit aperiam exercitationem
+              repellat perspiciatis aliquid aliquam dolor nulla.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {businesses.map((business) => (
-              <BusinessCard
-                key={business.id}
-                business={business}
-              />
-            ))}
+            <BusinessCard
+              image={stifinPic}
+              name="STIFIn "
+              description="Tes STIFIn membantu mengenali potensi genetik anak melalui sidik jari (fingerprint). Pola sidik jari terbentuk sejak lahir dan berkaitan erat dengan fungsi otak. Artinya, dari sidik jari inilah dapat dipetakan gaya kecerdasan alami anak, bukan sekadar kemampuan akademik."
+              link="/bisnis/stifin"
+            />
           </div>
         </div>
       </section>
