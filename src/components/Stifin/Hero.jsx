@@ -1,14 +1,18 @@
 import { MessageCircle } from "lucide-react";
-import React from "react";
+import overlayImage from "../../assets/stifin/1.jpeg";
 
 const Hero = () => {
   return (
     <div>
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          {/* Headline */}
-          <h1 className="text-2xl md:text-3xl font-bold">Kenali Potensi Anak dengan STIFIN</h1>
+      <div className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-42 px-4 overflow-hidden">
+        <img
+          src={overlayImage}
+          alt="Overlay"
+          className="absolute inset-0 w-[120%] h-full object-cover opacity-20 left-1/2 -translate-x-1/2"
+        />
 
+        <div className="relative max-w-4xl mx-auto text-center space-y-6">
+          <h1 className="text-2xl md:text-3xl font-bold">Kenali Potensi Anak dengan STIFIN</h1>
           <p className="text-sm md:text-base opacity-90">STIFIN membantu memahami karakter dan bakat unik anak Anda.</p>
         </div>
       </div>
