@@ -4,7 +4,7 @@ import { images } from "../../data/stifin_image";
 
 const Image = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlay] = useState(true);
+  const isAutoPlay = true;
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
@@ -18,6 +18,7 @@ const Image = () => {
     setCurrentIndex(index);
   };
 
+  // Autoplay tanpa currentIndex sebagai dependency
   useEffect(() => {
     if (!isAutoPlay) return;
 
@@ -26,7 +27,7 @@ const Image = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlay]);
+  }, [isAutoPlay]);
 
   return (
     <div className="flex flex-col items-center px-4 py-8 sm:py-12">
@@ -49,28 +50,31 @@ const Image = () => {
             ))}
           </div>
 
+          {/* Previous Button */}
           <button
             onClick={prevSlide}
-            className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 bg-green-800 hover:bg-green-600 text-white p-2.5 sm:p-3 rounded-full backdrop-blur-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 bg-green-800 hover:bg-green-600 text-white p-2.5 sm:p-3 rounded-full backdrop-blur-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-20"
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} />
           </button>
 
+          {/* Next Button */}
           <button
             onClick={nextSlide}
-            className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 bg-green-800 hover:bg-green-600 text-white p-2.5 sm:p-3 rounded-full backdrop-blur-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 bg-green-800 hover:bg-green-600 text-white p-2.5 sm:p-3 rounded-full backdrop-blur-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-20"
             aria-label="Next slide"
           >
             <ChevronRight size={24} />
           </button>
 
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+          {/* Dots Indicator */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
+                className={`cursor-pointer transition-all duration-300 rounded-full ${
                   index === currentIndex ? "bg-green-900 w-6 h-2" : "bg-green-500 w-2 h-2 hover:bg-green-700"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
