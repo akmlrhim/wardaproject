@@ -1,10 +1,6 @@
 import { Award, CheckCircle, MessageCircle } from "lucide-react";
 
 export default function Footer() {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/6283178257986", "_blank");
-  };
-
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-6">
       <div className="max-w-6xl mx-auto">
@@ -55,17 +51,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="border-t border-gray-700 pt-8 text-center">
-          <button
-            onClick={handleWhatsApp}
-            className="bg-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition mb-6 inline-flex items-center gap-2"
-          >
-            <MessageCircle size={20} />
-            Hubungi Kami
-          </button>
-          <p className="text-gray-400 text-sm">© 2026 STIFIn - Warda Mompreneur. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import Testimonial from "./partials/TestimonialSlide";
+import Testimonial from "../partials/TestimonialSlide";
 
 export default function Hero() {
   return (
