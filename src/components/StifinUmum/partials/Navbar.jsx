@@ -73,13 +73,13 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
+            <button
               onClick={(e) => handleScrollTo(e, "#kontak")}
               className="hidden sm:inline-flex bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-emerald-200 hover:-translate-y-0.5 items-center gap-2 cursor-pointer"
             >
               <MessageCircle size={18} />
               <span>Konsultasi</span>
-            </a>
+            </button>
 
             <button
               className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition"

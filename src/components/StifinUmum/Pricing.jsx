@@ -132,7 +132,7 @@ export default function Pricing() {
 
                 <button
                   className="block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
-                  onClick={handleScrollTo}
+                  onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
                 </button>
@@ -155,7 +155,7 @@ export default function Pricing() {
                 </div>
                 <button
                   className="block w-full bg-white text-emerald-600 py-2.5 rounded-lg font-semibold hover:bg-emerald-50 transition text-sm"
-                  onClick={handleScrollTo}
+                  onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
                 </button>
@@ -175,7 +175,7 @@ export default function Pricing() {
                 </div>
                 <button
                   className="block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
-                  onClick={handleScrollTo}
+                  onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
                 </button>
@@ -261,7 +261,7 @@ export default function Pricing() {
 
           <div className="text-center mt-10">
             <button
-              onClick={handleScrollTo}
+              onClick={(e) => handleScrollTo(e, "#kontak")}
               className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-3 rounded-xl font-bold text-sm sm:text-lg hover:from-emerald-700 hover:to-emerald-800 transition shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
             >
               <MessageCircle size={24} />
