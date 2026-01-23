@@ -1,12 +1,12 @@
 import { useState } from "react";
-import promotorImg from "../../assets/ibu_warda.jpeg";
-import testimonial1 from "../../assets/testimoni/1.mp4";
-import testimonial2 from "../../assets/testimoni/2.jpeg";
-import testimonial3 from "../../assets/testimoni/3.jpeg";
-import testimonial4 from "../../assets/testimoni/4.jpeg";
-import testimonial5 from "../../assets/testimoni/5.jpeg";
-import testimonial6 from "../../assets/testimoni/6.jpeg";
-import sertifikatImg from "../../assets/sertifikat.jpg";
+import promotorImg from "../../../assets/ibu_warda.jpeg";
+import testimonial1 from "../../../assets/testimoni/1.mp4";
+import testimonial2 from "../../../assets/testimoni/2.jpeg";
+import testimonial3 from "../../../assets/testimoni/3.jpeg";
+import testimonial4 from "../../../assets/testimoni/4.jpeg";
+import testimonial5 from "../../../assets/testimoni/5.jpeg";
+import testimonial6 from "../../../assets/testimoni/6.jpeg";
+import sertifikatImg from "../../../assets/sertifikat.jpg";
 import { ChevronLeft, ChevronRight, CheckCircle, Award, X, ZoomIn } from "lucide-react";
 
 export default function Promotor() {

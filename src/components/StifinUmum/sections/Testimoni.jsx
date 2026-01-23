@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import testimoniVideo from "../../assets/testimoni/video_testimoni.mp4";
+import testimoniVideo from "../../../assets/testimoni/video_testimoni.mp4";
 
 export default function Testimoni() {
   const testimonials = [
