@@ -41,9 +41,6 @@ export default function Navbar() {
               alt="Logo STIFIn"
               className="h-10 w-auto group-hover:scale-105 transition-transform"
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-800 bg-clip-text text-transparent">
-              STIFIn
-            </span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">

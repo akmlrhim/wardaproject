@@ -5,6 +5,7 @@ const BusinessCard = ({ image, name, description, link }) => {
     <Link
       to={link}
       className="block max-w-sm rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white"
+      onClick={() => window.scrollTo(0, 0)}
     >
       <img
         src={image}

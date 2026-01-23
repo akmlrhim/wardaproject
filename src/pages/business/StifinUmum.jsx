@@ -15,8 +15,9 @@ import {
 } from "lucide-react";
 
 import Navbar from "../../components/StifinUmum/Navbar";
-import Testimonial from "../../components/StifinUmum/Testimonial";
+import Testimonial from "../../components/StifinUmum/partials/TestimonialSlide";
 import Promotor from "../../components/StifinUmum/Promotor";
+import Testimoni from "../../components/StifinUmum/Testimoni";
 
 export default function StifinUmum() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -52,31 +53,8 @@ export default function StifinUmum() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Dewi, Ibu Anisa",
-      text: "Anisa (8 tahun) ternyata tipe Intuiting. Setelah metode belajarnya disesuaikan, dia jauh lebih cepat paham dan percaya diri.",
-      rating: 5,
-    },
-    {
-      name: "Budi, Ayah Fikri",
-      text: "Fikri (15 tahun) menunjukkan tipe Thinking. Sekarang cara belajarnya lebih terstruktur dan dia jadi lebih aktif.",
-      rating: 5,
-    },
-    {
-      name: "Rini, Entrepreneur",
-      text: "Saya umur 28 tahun baru tahu ternyata saya tipe Sensing. Pantas selama ini merasa tidak cocok kerja kantoran. Sekarang saya lebih yakin untuk terjun ke bisnis kuliner.",
-      rating: 5,
-    },
-    {
-      name: "Agus & Sari, Pasangan Menikah",
-      text: "Tes ini bikin saya dan istri lebih saling paham. Ternyata kami beda tipe, makanya sering miss komunikasi. Sekarang lebih harmonis.",
-      rating: 5,
-    },
-  ];
-
   const handleWhatsApp = () => {
-    window.open("https://wa.me/", "_blank");
+    window.open("https://wa.me/6283178257986", "_blank");
   };
 
   return (
@@ -90,17 +68,17 @@ export default function StifinUmum() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-300 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
+        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-10">
             <div className="text-white">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
                 Temukan Potensi Terbaikmu <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-teal-100">
                   dalam 15 Menit
                 </span>
               </h1>
 
-              <p className="text-lg mb-10 text-white/90 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg mb-8 text-white/90 leading-relaxed max-w-lg">
                 Bukan salah kamu kalau kamu ngerasa gak kenal sama diri sendiri. Kamu hanya perlu tahu tipe kecerdasanmu
                 dengan metode ilmiah berbasis genetik.
               </p>
@@ -108,10 +86,10 @@ export default function StifinUmum() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={handleWhatsApp}
-                  className="group bg-white text-emerald-800 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-3"
+                  className="group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2"
                 >
                   <MessageCircle
-                    size={24}
+                    size={20}
                     className="group-hover:rotate-12 transition-transform"
                   />
                   Konsultasi Gratis via WhatsApp
@@ -568,74 +546,7 @@ export default function StifinUmum() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Testimoni
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Mereka Sudah Merasakan Manfaatnya</h2>
-            <p className="text-xl text-gray-600">200+ peserta telah mengubah hidup mereka</p>
-          </div>
-
-          {/* Video Testimonial Placeholder */}
-          <div className="mb-12 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border-2 border-emerald-200">
-              <div className="bg-white rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden group cursor-pointer hover:shadow-lg transition">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-teal-600/10"></div>
-                <div className="relative text-center">
-                  <div className="w-20 h-20 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition shadow-lg">
-                    <svg
-                      className="w-10 h-10 text-white ml-1"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-emerald-900 font-semibold text-lg">Video Testimoni Peserta</p>
-                  <p className="text-emerald-700 text-sm mt-2">Klik untuk memutar</p>
-                </div>
-              </div>
-              <p className="text-center text-gray-600 mt-4 italic">
-                Dengarkan langsung pengalaman peserta yang telah mengikuti tes STIFIn
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testi, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border border-gray-100 relative"
-              >
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                  "
-                </div>
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testi.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={20}
-                      className="fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg italic">{testi.text}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                    {testi.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900">{testi.name}</p>
-                    <p className="text-sm text-emerald-600">Verified User</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimoni />
 
       {/* Promotor */}
       <Promotor />
@@ -1017,7 +928,7 @@ export default function StifinUmum() {
               <MessageCircle size={20} />
               Hubungi Kami
             </button>
-            <p className="text-gray-400 text-sm">© 2024 STIFIn Firdaus Life - Kalimantan. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2026 STIFIn - Warda Mompreneur. All rights reserved.</p>
           </div>
         </div>
       </footer>
