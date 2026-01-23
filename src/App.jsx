@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Stifin from "./pages/business/Stifin";
+import StifinUmum from "./pages/business/StifinUmum";
 
 function App() {
   return (
@@ -12,8 +13,13 @@ function App() {
         />
 
         <Route
-          path="/bisnis/stifin"
+          path="/stifin-anak"
           element={<Stifin />}
+        />
+
+        <Route
+          path="/stifin-umum"
+          element={<StifinUmum />}
         />
       </Routes>
     </div>

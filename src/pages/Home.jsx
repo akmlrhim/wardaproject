@@ -11,7 +11,10 @@ const Home = () => {
     <div>
       <Header />
 
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        id="#about"
+      >
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-justify">
@@ -72,7 +75,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50"
+        id="bisnis"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-800 mb-4">Bisnis Saya</h2>
@@ -86,8 +92,8 @@ const Home = () => {
             <BusinessCard
               image={stifinPic}
               name="STIFIn"
-              description="Tes STIFIn membantu mengenali potensi genetik anak melalui sidik jari (fingerprint). Pola sidik jari terbentuk sejak lahir dan berkaitan erat dengan fungsi otak. Artinya, dari sidik jari inilah dapat dipetakan gaya kecerdasan alami anak, bukan sekadar kemampuan akademik."
-              link="/bisnis/stifin"
+              description="STIFIn merupakan sebuah konsep ilmu yang memetakan manusia berdasarkan sistem operasi otaknya. Dari berbagai teori yang ada, STIFIn membaginya menjadi 5 Mesin Kecerdasan dan 9 Personality Genetik."
+              link="/stifin-umum"
             />
           </div>
         </div>
