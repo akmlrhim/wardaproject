@@ -55,11 +55,6 @@ export default function Promotor() {
             <div className="grid lg:grid-cols-2 min-h-[500px]">
               <div className="p-8 md:p-12 flex flex-col justify-center relative">
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-widest mb-6">
-                    <Award size={14} />
-                    Official Partner
-                  </div>
-
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Promotor Berpengalaman</h2>
                   <p className="text-emerald-100/80 text-sm mb-10 max-w-md leading-relaxed">
                     Dibimbing langsung oleh praktisi bersertifikat resmi untuk hasil analisis yang akurat dan solusi

@@ -1,6 +1,6 @@
 import { Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +15,24 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/", "_blank");
+  const handleScrollTo = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setIsOpen(false);
+    }
   };
 
   const navLinks = [
+    { name: "Beranda", href: "#beranda" },
     { name: "Tentang", href: "#tentang" },
     { name: "Manfaat", href: "#manfaat" },
     { name: "Testimoni", href: "#testimoni" },
@@ -35,7 +48,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-3 cursor-pointer group">
+          <div
+            className="flex items-center gap-3 cursor-pointer group"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <img
               src={logo}
               alt="Logo STIFIn"
@@ -48,7 +64,8 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-green hover:text-emerald-700 font-medium transition-colors text-sm font-medium capitalize tracking-wide"
+                onClick={(e) => handleScrollTo(e, link.href)}
+                className="text-gray-700 hover:text-emerald-700 font-medium transition-colors text-sm capitalize tracking-wide cursor-pointer"
               >
                 {link.name}
               </a>
@@ -56,13 +73,13 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button
-              onClick={handleWhatsApp}
-              className="hidden sm:inline-flex bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-emerald-200 hover:-translate-y-0.5 items-center gap-2"
+            <a
+              onClick={(e) => handleScrollTo(e, "#kontak")}
+              className="hidden sm:inline-flex bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-emerald-200 hover:-translate-y-0.5 items-center gap-2 cursor-pointer"
             >
               <MessageCircle size={18} />
               <span>Konsultasi</span>
-            </button>
+            </a>
 
             <button
               className="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition"
@@ -75,21 +92,23 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden absolute w-full bg-white border-b border-gray-100 transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}
+        className={`md:hidden absolute w-full bg-white border-b border-gray-100 transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        }`}
       >
         <div className="px-6 py-4 space-y-4 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="block text-gray-600 hover:text-emerald-600 font-medium py-2 border-b border-gray-50 last:border-0"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleScrollTo(e, link.href)}
+              className="block text-gray-600 hover:text-emerald-600 font-medium py-2 border-b border-gray-50 last:border-0 cursor-pointer"
             >
               {link.name}
             </a>
           ))}
           <button
-            onClick={handleWhatsApp}
+            onClick={(e) => handleScrollTo(e, "#kontak")}
             className="w-full mt-4 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 inline-flex justify-center items-center gap-2"
           >
             <MessageCircle size={18} />
