@@ -1,17 +1,3 @@
-import {
-  MessageCircle,
-  Users,
-  Briefcase,
-  GraduationCap,
-  Heart,
-  CheckCircle,
-  Award,
-  Clock,
-  TrendingUp,
-  Shield,
-  BarChart3,
-} from "lucide-react";
-
 import Promotor from "../../components/StifinUmum/sections/Promotor";
 import Testimoni from "../../components/StifinUmum/sections/Testimoni";
 import Footer from "../../components/StifinUmum/partials/Footer";
