@@ -51,23 +51,19 @@ export default function WhatYouGet() {
               {[
                 {
                   step: "01",
-                  title: "Booking Jadwal",
-                  desc: "Hubungi saya untuk menentukan waktu dan lokasi tes yang nyaman.",
+                  title: "Penentuan jadwal dan tempat test",
                 },
                 {
                   step: "02",
-                  title: "Scan Sidik Jari",
-                  desc: "Proses pengambilan data 10 sidik jari hanya 5-10 menit.",
+                  title: "Tes STIFIn selama 15 Menit",
                 },
                 {
                   step: "03",
-                  title: "Processing Data",
-                  desc: "Data dikirim ke server pusat STIFIn untuk dianalisis sistem.",
+                  title: "Hasil Tes Keluar",
                 },
                 {
                   step: "04",
-                  title: "Penjelasan Hasil",
-                  desc: "Hasil keluar instan & sesi penjelasan mendalam oleh Promotor.",
+                  title: "Penjelasan dan konsultasi private dengan Promotor",
                 },
               ].map((item, idx) => {
                 const isLeft = idx % 2 === 0;
@@ -95,8 +91,7 @@ export default function WhatYouGet() {
                             Step {item.step}
                           </span>
 
-                          <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                          <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                          <h3 className="text-md font-medium text-gray-900">{item.title}</h3>
                         </div>
                       </div>
                     </div>
