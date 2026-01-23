@@ -887,8 +887,7 @@ export default function StifinUmum() {
               <h4 className="font-bold text-lg mb-4">Kontak</h4>
               <div className="space-y-2 text-gray-400">
                 <p>Musdalifa Warda</p>
-                <p>STIFIn Firdaus Life</p>
-                <p>Area Kalimantan</p>
+                <p>STIFIn</p>
               </div>
             </div>
 
