@@ -140,7 +140,7 @@ export default function Benefits() {
         <div className="text-center mt-10">
           <button
             onClick={(e) => handleScrollTo(e, "#kontak")}
-            className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-3 rounded-xl font-bold text-sm sm:text-lg hover:from-emerald-700 hover:to-emerald-800 transition shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
+            className="wa-btn bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-3 rounded-xl font-bold text-sm sm:text-lg hover:from-emerald-700 hover:to-emerald-800 transition shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
           >
             <MessageCircle size={24} />
             Konsultasi Gratis di Whatshapp

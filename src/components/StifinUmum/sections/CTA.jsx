@@ -49,7 +49,7 @@ export default function CTA() {
 
           <button
             onClick={handleWhatsApp}
-            className="group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2"
+            className="wa-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2"
           >
             <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             <span>Chat WhatsApp Sekarang</span>

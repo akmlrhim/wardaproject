@@ -131,7 +131,7 @@ export default function Pricing() {
                 </div>
 
                 <button
-                  className="block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
+                  className="wa-btn block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
                   onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
@@ -154,7 +154,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <button
-                  className="block w-full bg-white text-emerald-600 py-2.5 rounded-lg font-semibold hover:bg-emerald-50 transition text-sm"
+                  className="wa-btn block w-full bg-white text-emerald-600 py-2.5 rounded-lg font-semibold hover:bg-emerald-50 transition text-sm"
                   onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
@@ -174,7 +174,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 <button
-                  className="block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
+                  className="wa-btn block w-full bg-emerald-600 text-white py-2.5 rounded-lg font-semibold hover:bg-emerald-700 transition text-sm"
                   onClick={(e) => handleScrollTo(e, "#kontak")}
                 >
                   Pilih Paket
