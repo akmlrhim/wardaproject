@@ -14,13 +14,13 @@ import Problem from "../../components/StifinUmum/sections/Problem";
 import Important from "../../components/StifinUmum/sections/Important";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
+// import ReactPixel from "react-facebook-pixel";
 
 export default function StifinUmum() {
   useDocumentTitle("STIFIn Umum");
 
   useEffect(() => {
-    const pixelId = (import.meta.env.VITE_FB_PIXEL_ID = "4227457170864918");
+    const pixelId = import.meta.env.VITE_FB_PIXEL_ID || "4227457170864918";
 
     if (!window.fbq) {
       !(function (f, b, e, v, n, t, s) {
