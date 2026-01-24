@@ -2,7 +2,13 @@ import { MessageCircle } from "lucide-react";
 
 export default function CTA() {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/6283178257986", "_blank");
+    const message = `Halo bu Warda 👋
+						Saya sudah baca penjelasan Tes STIFIn di website dan tertarik untuk daftar.
+						Boleh minta info lanjutan mengenai pendaftarannya? Terima kasih 😊`;
+
+    const url = `https://wa.me/6283178257986?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
   };
 
   return (
