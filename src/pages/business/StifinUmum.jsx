@@ -13,9 +13,22 @@ import Introduction from "../../components/StifinUmum/sections/Introduction";
 import Problem from "../../components/StifinUmum/sections/Problem";
 import Important from "../../components/StifinUmum/sections/Important";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { useEffect } from "react";
+import ReactPixel from "react-facebook-pixel";
 
 export default function StifinUmum() {
   useDocumentTitle("STIFIn Umum");
+
+  useEffect(() => {
+    const options = {
+      autoConfig: true,
+      debug: false,
+    };
+
+    ReactPixel.init("4227457170864918", options);
+
+    ReactPixel.pageView();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
