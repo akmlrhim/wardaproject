@@ -12,8 +12,11 @@ import TargetAudience from "../../components/StifinUmum/sections/TargetAudience"
 import Introduction from "../../components/StifinUmum/sections/Introduction";
 import Problem from "../../components/StifinUmum/sections/Problem";
 import Important from "../../components/StifinUmum/sections/Important";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function StifinUmum() {
+  useDocumentTitle("STIFIn Umum");
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Navbar />
@@ -58,4 +61,3 @@ export default function StifinUmum() {
     </div>
   );
 }
-	
