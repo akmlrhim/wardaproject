@@ -2,11 +2,16 @@ import { MessageCircle } from "lucide-react";
 
 export default function CTA() {
   const handleWhatsApp = () => {
+    const phoneNumber = "6283178257986";
     const message = `Halo bu Warda 👋
 	Saya sudah baca penjelasan Tes STIFIn di website dan tertarik untuk daftar.
 	Boleh minta info lanjutan mengenai pendaftarannya? Terima kasih 😊`;
 
-    const url = `https://wa.me/6283178257986?text=${encodeURIComponent(message)}`;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const baseUrl = isMobile ? "https://api.whatsapp.com/send" : "https://web.whatsapp.com/send";
+
+    const url = `${baseUrl}?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
   };
