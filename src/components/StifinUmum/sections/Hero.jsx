@@ -2,6 +2,21 @@ import { MessageCircle } from "lucide-react";
 import Testimonial from "../partials/TestimonialSlide";
 
 export default function Hero() {
+  const handleScrollTo = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       className="relative overflow-hidden min-h-screen flex items-center"
@@ -29,7 +44,8 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              <button
+                onClick={(e) => handleScrollTo(e, "#kontak")}
                 href="#kontak"
                 className="whatsapp-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2"
               >
@@ -38,7 +54,7 @@ export default function Hero() {
                   className="group-hover:rotate-12 transition-transform"
                 />
                 Konsultasi Gratis via WhatsApp
-              </a>
+              </button>
             </div>
           </div>
 
