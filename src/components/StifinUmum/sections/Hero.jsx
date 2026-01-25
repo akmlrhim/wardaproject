@@ -47,7 +47,7 @@ export default function Hero() {
               <button
                 onClick={(e) => handleScrollTo(e, "#kontak")}
                 href="#kontak"
-                className="whatsapp-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2"
+                className="wa-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2"
               >
                 <MessageCircle
                   size={20}
