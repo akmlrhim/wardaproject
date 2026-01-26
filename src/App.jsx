@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import { Navigate, Route, Routes } from "react-router-dom";
+// import Home from "./pages/Home";
 import Stifin from "./pages/business/Stifin";
 import StifinUmum from "./pages/business/StifinUmum";
 
@@ -9,7 +9,12 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home />}
+          element={
+            <Navigate
+              to="/stifin-umum"
+              replace
+            />
+          }
         />
 
         <Route
