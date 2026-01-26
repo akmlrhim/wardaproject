@@ -1,56 +1,44 @@
-import { Award, CheckCircle, MessageCircle } from "lucide-react";
+import React from "react";
+import { Award, Instagram, Facebook, Youtube, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center">
-                <Award size={24} />
-              </div>
-              <span className="text-2xl font-bold">STIFIn</span>
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              Kenali potensimu, temukan jati dirimu, raih masa depan yang lebih cerah
-            </p>
-          </div>
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-4 pb-4 px-6 border-t border-gray-800 w-full">
+      <div className="w-full flex flex-col items-center justify-center text-center space-y-3">
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto mt-2">
+            Kenali potensimu, temukan jati dirimu, raih masa depan yang lebih cerah bersama tes genetik terbaik.
+          </p>
+        </div>
 
-          <div>
-            <h4 className="font-bold text-lg mb-4">Kontak</h4>
-            <div className="space-y-2 text-gray-400">
-              <p>Musdalifa Warda</p>
-              <p>STIFIn</p>
-            </div>
+        <div className="flex flex-col items-center gap-4">
+          <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Ikuti Kami</h5>
+          <div className="flex items-center justify-center gap-4">
+            {[
+              {
+                icon: Instagram,
+                href: "https://www.instagram.com/stifinwithwarda",
+                color: "hover:bg-pink-600",
+                label: "Instagram",
+              },
+              { icon: Facebook, href: "#", color: "hover:bg-blue-600", label: "Facebook" },
+              { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
+              { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                aria-label={social.label}
+                className={`w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-white hover:-translate-y-1 hover:border-transparent hover:shadow-lg ${social.color}`}
+              >
+                <social.icon size={20} />
+              </a>
+            ))}
           </div>
+        </div>
 
-          <div>
-            <h4 className="font-bold text-lg mb-4">Informasi</h4>
-            <div className="space-y-2 text-gray-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle
-                  size={16}
-                  className="text-emerald-500"
-                />
-                <p>Konsultan Bersertifikat</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle
-                  size={16}
-                  className="text-emerald-500"
-                />
-                <p>200+ Peserta Terlayani</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle
-                  size={16}
-                  className="text-emerald-500"
-                />
-                <p>Pengalaman lebih dari 3 Tahun</p>
-              </div>
-            </div>
-          </div>
+        <div className="border-t border-gray-800/50 w-full max-w-2xl mx-auto mt-2">
+          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} STIFIn. All rights reserved.</p>
         </div>
       </div>
     </footer>
