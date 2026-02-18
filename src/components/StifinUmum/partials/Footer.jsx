@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Facebook, Youtube, Linkedin, Threads } from "lucide-react";
+import { Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -27,7 +27,7 @@ export default function Footer() {
                 color: "hover:bg-blue-600",
                 label: "Facebook",
               },
-              { icon: Threads, href: "#", color: "hover:bg-red-600", label: "Youtube" },
+              { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
               { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
             ].map((social, index) => (
               <a
