@@ -11,7 +11,7 @@ export default function CTA() {
         <p className="text-blue-200 italic text-base mb-4 font-medium">
           "Jangan tunggu sampai kesehatan atau rekening bank Anda 'kering'."
         </p>
-        <h2 className="text-2xl md:text-4xl font-black text-white mb-8 leading-tight">
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-8 leading-tight">
           Ambil langkah berani hari ini untuk masa depan yang lebih{" "}
           <span className="text-blue-200">terhidrasi dan sejahtera.</span>
         </h2>

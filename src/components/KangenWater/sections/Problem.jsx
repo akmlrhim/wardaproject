@@ -17,7 +17,7 @@ export function ProfileStrip() {
           <p className="text-xs text-blue-400 font-bold uppercase tracking-widest mb-1">
             Distributor Resmi Enagic Indonesia
           </p>
-          <h3 className="text-2xl font-black text-white mb-1">Musdalifa Warda</h3>
+          <h3 className="text-2xl font-bold text-white mb-1">Musdalifa Warda</h3>
           <p className="text-white italic text-sm max-w-xl">
             "Teknologi ionisasi air teruji selama puluhan tahun, dipercaya oleh jutaan keluarga di seluruh dunia."
           </p>
@@ -75,7 +75,7 @@ export function Problem() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="max-w-2xl mb-16">
           <p className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Masalahnya...</p>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
             Sudah minum cukup air, tapi tetap lesu?
           </h2>
           <p className="text-slate-500 text-lg">Saatnya mengubah air minum dan jalan hidup Anda.</p>

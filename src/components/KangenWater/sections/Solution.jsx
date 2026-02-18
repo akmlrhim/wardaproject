@@ -77,7 +77,7 @@ export default function Solution() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Solusi Baru</p>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
             Investasi Holistik untuk Tubuh & Dompet
           </h2>
           <p className="text-slate-500 text-base max-w-2xl mx-auto">
@@ -95,18 +95,19 @@ export default function Solution() {
               <div className="w-14 h-14 bg-blue-50 group-hover:bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition-colors">
                 {s.icon}
               </div>
-              <h3 className="text-lg font-black text-slate-900 mb-3">{s.title}</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">{s.title}</h3>
               <p className="text-slate-500 text-md leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl">
+        <div
+          className="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl"
+          id="manfaat"
+        >
           <div className="grid lg:grid-cols-5 items-stretch min-h-[500px]">
             <div className="lg:col-span-3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-gradient-to-br from-blue-600 to-blue-500">
-              <h3 className="text-3xl md:text-4xl font-black text-white mb-10 tracking-tight">
-                Dengan Kangen Water...
-              </h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tight">Dengan Kangen Water...</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-y-8 gap-x-10">
                 {benefits.map((b, i) => (
                   <div

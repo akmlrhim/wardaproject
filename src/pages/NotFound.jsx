@@ -6,7 +6,7 @@ export default function NotFound() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center animate-in fade-in duration-500">
-      <h1 className="text-8xl font-black text-green-900 mb-2 tracking-tighter">404</h1>
+      <h1 className="text-8xl font-bold text-green-900 mb-2 tracking-tighter">404</h1>
       <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Halaman Tidak Ditemukan</h2>
       <p className="text-slate-600 max-w-md mb-10 leading-relaxed">
         Maaf, sepertinya halaman yang Anda cari telah dipindahkan, dihapus, atau tidak pernah ada.

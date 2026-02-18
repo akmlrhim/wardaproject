@@ -1,17 +1,16 @@
 import { FingerprintIcon, Lamp, Menu, MessageCircle, X } from "lucide-react";
-import logo from "../../../assets/logo.png";
 import { useScroll } from "../../../hooks/useScroll";
+
+const navLinks = [
+  { name: "Beranda", href: "#beranda" },
+  { name: "Tentang", href: "#tentang" },
+  { name: "Manfaat", href: "#manfaat" },
+  { name: "Testimoni", href: "#testimoni" },
+  { name: "FAQ", href: "#faq" },
+];
 
 export default function Navbar() {
   const { isScrolled, isOpen, setIsOpen, handleScrollTo } = useScroll();
-
-  const navLinks = [
-    { name: "Beranda", href: "#beranda" },
-    { name: "Tentang", href: "#tentang" },
-    { name: "Manfaat", href: "#manfaat" },
-    { name: "Testimoni", href: "#testimoni" },
-    { name: "FAQ", href: "#faq" },
-  ];
 
   return (
     <nav
@@ -30,7 +29,7 @@ export default function Navbar() {
             <div className="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg">
               <FingerprintIcon className="text-white w-5 h-5" />
             </div>
-            <span className="text-xl font-black text-emerald-700 tracking-tight">STIFIn</span>
+            <span className="text-xl font-bold text-emerald-700 tracking-tight">STIFIn</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">

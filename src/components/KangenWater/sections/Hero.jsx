@@ -5,7 +5,10 @@ import { useScroll } from "../../../hooks/useScroll.jsx";
 export default function Hero() {
   const { handleScrollTo } = useScroll();
   return (
-    <section className="pt-24 lg:pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden">
+    <section
+      className="pt-24 lg:pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden"
+      id="hero"
+    >
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div
         className="absolute right-0 top-0 w-1/2 h-full bg-blue-700 hidden lg:block"
@@ -17,7 +20,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white px-4 py-1.5 rounded-full text-xs font-bold mb-8 uppercase tracking-widest">
             <Award size={12} /> Official Enagic Distributor
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
             Transformasi Total Dimulai dari
             <br />
             <span className="text-blue-200">Keran Dapur Anda.</span>
@@ -38,7 +41,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={(e) => handleScrollTo(e, "#kontak")}
-              className="cursor-pointer bg-white text-blue-700 px-8 py-4 rounded-xl font-black text-base shadow-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
+              className="cursor-pointer bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
             >
               Mulai Sekarang <ChevronRight size={18} />
             </button>

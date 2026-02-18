@@ -33,7 +33,7 @@ export default function Testimonial() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Apa Kata Mereka?</p>
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900">Bukti Nyata Pengguna</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Bukti Nyata Pengguna</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -44,7 +44,7 @@ export default function Testimonial() {
             >
               <p className="text-slate-600 text-md leading-relaxed mb-7 italic">"{t.text}"</p>
               <div className="flex items-center gap-3 pt-5 border-t border-slate-100">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-black text-white text-sm">
+                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white text-sm">
                   {t.initial}
                 </div>
                 <div>
