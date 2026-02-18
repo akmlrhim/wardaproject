@@ -1,4 +1,4 @@
-import { Menu, MessageCircle, X } from "lucide-react";
+import { FingerprintIcon, Lamp, Menu, MessageCircle, X } from "lucide-react";
 import logo from "../../../assets/logo.png";
 import { useScroll } from "../../../hooks/useScroll";
 
@@ -24,14 +24,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center gap-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <img
-              src={logo}
-              alt="Logo STIFIn"
-              className="h-10 w-auto group-hover:scale-105 transition-transform"
-            />
+            <div className="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg">
+              <FingerprintIcon className="text-white w-5 h-5" />
+            </div>
+            <span className="text-xl font-black text-emerald-700 tracking-tight">STIFIn</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">

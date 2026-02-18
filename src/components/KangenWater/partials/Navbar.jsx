@@ -24,15 +24,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div
-            className="flex items-center gap-2 cursor-pointer group"
+            className="flex items-center gap-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg">
               <Droplets className="text-white w-5 h-5" />
             </div>
-            <span className="text-xl font-black tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors">
-              Kangen<span className="text-blue-600">Water</span>
-            </span>
+            <span className="text-xl font-black tracking-tight text-blue-900">Kangen Water</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
