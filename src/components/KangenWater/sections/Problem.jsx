@@ -66,7 +66,7 @@ const problems = [
   },
 ];
 
-export function ProblemSection() {
+export function Problem() {
   return (
     <section
       id="masalah"

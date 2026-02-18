@@ -24,7 +24,7 @@ export default function Navbar() {
             <Droplets className="text-white w-5 h-5" />
           </div>
           <span className="text-lg font-black tracking-tight text-slate-900">
-            Kangen<span className="text-blue-600">Pure</span>
+            Kangen<span className="text-blue-600">Water</span>
           </span>
         </div>
 
@@ -38,12 +38,7 @@ export default function Navbar() {
               {link}
             </a>
           ))}
-          <a
-            href="#ai-consultant"
-            className="text-sm font-bold text-blue-600 flex items-center gap-1.5 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full hover:bg-blue-100 transition-colors"
-          >
-            <Sparkles size={13} /> AI Konsultan
-          </a>
+
           <a
             href={WA_LINK}
             className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all flex items-center gap-2 shadow-sm"
