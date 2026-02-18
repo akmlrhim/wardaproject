@@ -1,4 +1,4 @@
-import { ArrowLeft, FileQuestion, Home } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
