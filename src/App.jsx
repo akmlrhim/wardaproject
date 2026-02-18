@@ -2,10 +2,11 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Stifin from "./pages/business/Stifin";
 import StifinUmum from "./pages/business/StifinUmum";
 import KangenWater from "./pages/business/KangenWater";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-green-100 to-green-150">
+    <div className="min-h-screen">
       <Routes>
         <Route
           path="/"
@@ -30,6 +31,12 @@ function App() {
         <Route
           path="/kangen-water"
           element={<KangenWater />}
+        />
+
+        {/* Error Page  */}
+        <Route
+          path="*"
+          element={<NotFound />}
         />
       </Routes>
     </div>
