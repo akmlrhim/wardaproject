@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-// import Home from "./pages/Home";
 import Stifin from "./pages/business/Stifin";
 import StifinUmum from "./pages/business/StifinUmum";
+import KangenWater from "./pages/business/KangenWater";
 
 function App() {
   return (
@@ -25,6 +25,11 @@ function App() {
         <Route
           path="/stifin-umum"
           element={<StifinUmum />}
+        />
+
+        <Route
+          path="/kangen-water"
+          element={<KangenWater />}
         />
       </Routes>
     </div>
