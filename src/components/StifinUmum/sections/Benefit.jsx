@@ -1,21 +1,8 @@
 import { MessageCircle } from "lucide-react";
+import { useScroll } from "../../../hooks/useScroll";
 
 export default function Benefits() {
-  const handleScrollTo = (e, id) => {
-    e.preventDefault();
-    const element = document.querySelector(id);
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
+  const { handleScrollTo } = useScroll();
   return (
     <section
       className="py-16 px-6"

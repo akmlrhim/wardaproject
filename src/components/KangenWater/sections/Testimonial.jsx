@@ -42,7 +42,7 @@ export default function Testimonial() {
               key={i}
               className="card-hover bg-white rounded-2xl p-8 border-2 border-slate-100 hover:border-blue-100"
             >
-              <p className="text-slate-600 text-sm leading-relaxed mb-7 italic">"{t.text}"</p>
+              <p className="text-slate-600 text-md leading-relaxed mb-7 italic">"{t.text}"</p>
               <div className="flex items-center gap-3 pt-5 border-t border-slate-100">
                 <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-black text-white text-sm">
                   {t.initial}

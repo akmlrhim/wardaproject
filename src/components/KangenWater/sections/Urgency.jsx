@@ -7,7 +7,7 @@ export default function Urgency() {
         <h3 className="text-3xl md:text-5xl font-black text-white mb-10 leading-tight">
           Masih Ragu? Apa yang Sebenarnya Anda Tunggu?
         </h3>
-        <div className="space-y-3 max-w-xl mx-auto mb-12">
+        <div className="space-y-3 max-w-2xl mx-auto mb-12">
           {[
             "Teknologinya sudah digunakan puluhan tahun.",
             "Jutaan keluarga di seluruh dunia sudah mempercayainya.",
@@ -21,7 +21,7 @@ export default function Urgency() {
                 size={18}
                 className="text-blue-400 shrink-0"
               />
-              <span className="text-slate-300 text-sm">{txt}</span>
+              <span className="text-slate-300 text-md">{txt}</span>
             </div>
           ))}
         </div>

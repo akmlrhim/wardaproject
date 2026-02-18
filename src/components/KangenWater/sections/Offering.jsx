@@ -1,7 +1,10 @@
 import { Award, Info, ShoppingCart, Wallet } from "lucide-react";
 import { IMAGES, WA_LINK } from "../constant";
+import { useScroll } from "../../../hooks/useScroll";
 
 export default function Offering() {
+  const { handleScrollTo } = useScroll();
+
   return (
     <section
       id="produk"
@@ -44,12 +47,12 @@ export default function Offering() {
                 "Kami menawarkan 'Air yang dapat mengubah hidup Anda', sesuai makna Kangen (回归) dalam bahasa Jepang:
                 kembali ke asal. Kembali ke tubuh yang sehat, kembali ke kebebasan finansial."
               </blockquote>
-              <a
-                href={WA_LINK}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-black text-lg shadow-lg inline-flex items-center gap-3 transition-all hover:-translate-y-1"
+              <button
+                onClick={(e) => handleScrollTo(e, "#kontak")}
+                className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-black text-lg shadow-lg inline-flex items-center gap-3 transition-all hover:-translate-y-1"
               >
                 SAYA MAU BERUBAH! <ShoppingCart size={20} />
-              </a>
+              </button>
               <p className="text-xs text-slate-400 italic mt-3">
                 Produk resmi dengan layanan purna jual dari distributor resmi Enagic Indonesia.
               </p>

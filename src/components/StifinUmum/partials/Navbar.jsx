@@ -1,41 +1,16 @@
 import { Menu, MessageCircle, X } from "lucide-react";
-import { useEffect, useState } from "react";
 import logo from "../../../assets/logo.png";
+import { useScroll } from "../../../hooks/useScroll";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScrollTo = (e, id) => {
-    e.preventDefault();
-    const element = document.querySelector(id);
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setIsOpen(false);
-    }
-  };
+  const { isScrolled, isOpen, setIsOpen, handleScrollTo } = useScroll();
 
   const navLinks = [
     { name: "Beranda", href: "#beranda" },
     { name: "Tentang", href: "#tentang" },
     { name: "Manfaat", href: "#manfaat" },
     { name: "Testimoni", href: "#testimoni" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   return (
@@ -65,9 +40,10 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className="text-gray-700 hover:text-emerald-700 font-medium transition-colors text-sm capitalize tracking-wide cursor-pointer"
+                className="text-black hover:text-emerald-700 font-medium transition-colors text-sm capitalize tracking-wide cursor-pointer relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-700 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
@@ -75,10 +51,10 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <button
               onClick={(e) => handleScrollTo(e, "#kontak")}
-              className="wa-btn hidden sm:inline-flex bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-emerald-200 hover:-translate-y-0.5 items-center gap-2 cursor-pointer"
+              className="wa-btn hidden sm:inline-flex bg-emerald-600 text-white px-6 py-2.5 rounded-full shadow-md font-bold hover:bg-emerald-700 transition-all shadow-sm hover:shadow-emerald-200 hover:-translate-y-0.5 items-center gap-2 cursor-pointer"
             >
               <MessageCircle size={18} />
-              <span>Konsultasi</span>
+              <span>Chat Sekarang</span>
             </button>
 
             <button
@@ -109,10 +85,10 @@ export default function Navbar() {
           ))}
           <button
             onClick={(e) => handleScrollTo(e, "#kontak")}
-            className="w-full mt-4 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 inline-flex justify-center items-center gap-2"
+            className="w-full mt-4 bg-emerald-600 text-white px-6 py-3 rounded-sm font-semibold hover:bg-emerald-700 inline-flex justify-center items-center gap-2"
           >
             <MessageCircle size={18} />
-            Konsultasi Gratis
+            Chat Sekarang
           </button>
         </div>
       </div>

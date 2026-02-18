@@ -90,7 +90,7 @@ export function Problem() {
               <div className="w-12 h-12 bg-blue-50 group-hover:bg-blue-100 rounded-xl flex items-center justify-center mb-5 transition-colors">
                 {p.icon}
               </div>
-              <p className="font-semibold text-slate-700 leading-relaxed text-sm">{p.title}</p>
+              <p className="font-semibold text-slate-700 leading-relaxed text-md">{p.title}</p>
             </div>
           ))}
         </div>

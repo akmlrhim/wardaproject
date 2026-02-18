@@ -1,7 +1,9 @@
 import { Award, ChevronRight } from "lucide-react";
-import { IMAGES, WA_LINK } from "../constant.js";
+import { IMAGES } from "../constant.js";
+import { useScroll } from "../../../hooks/useScroll.jsx";
 
 export default function Hero() {
+  const { handleScrollTo } = useScroll();
   return (
     <section className="pt-24 lg:pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-20" />
@@ -34,18 +36,18 @@ export default function Hero() {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={WA_LINK}
-              className="bg-white text-blue-700 px-8 py-4 rounded-xl font-black text-base shadow-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
+            <button
+              onClick={(e) => handleScrollTo(e, "#kontak")}
+              className="cursor-pointer bg-white text-blue-700 px-8 py-4 rounded-xl font-black text-base shadow-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2"
             >
               Mulai Sekarang <ChevronRight size={18} />
-            </a>
-            <a
-              href="#solusi"
-              className="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+            </button>
+            <button
+              onClick={(e) => handleScrollTo(e, "#solusi")}
+              className="cursor-pointer border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center gap-2"
             >
               Pelajari Lebih Lanjut
-            </a>
+            </button>
           </div>
         </div>
 

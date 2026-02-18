@@ -1,51 +1,49 @@
-import { Award, CheckCircle, Droplets, MessageCircle, ShieldCheck } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 py-16 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
-        <div className="max-w-xs">
-          <div className="flex items-center gap-2 mb-5">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Droplets className="text-white w-5 h-5" />
-            </div>
-            <span className="text-lg font-black text-white">
-              Kangen<span className="text-blue-400">Pure</span>
-            </span>
-          </div>
-          <p className="text-sm leading-relaxed">
-            Teknologi Ionisasi Enagic Jepang untuk hidup yang lebih sehat dan finansial yang lebih bebas.
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-12 pb-4 px-6 border-t border-gray-800 w-full">
+      <div className="w-full flex flex-col items-center justify-center text-center space-y-3">
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto mt-2">
+            Raih kesehatan optimal dan kebebasan finansial bersama teknologi ionisasi air Enagic Jepang.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-12">
-          <div>
-            <h4 className="text-white font-black mb-5 uppercase tracking-widest text-xs">Kontak</h4>
-            <div className="space-y-3 text-sm">
-              <p className="flex items-center gap-2 text-blue-400 font-semibold">
-                <MessageCircle size={15} /> Musdalifa Warda
-              </p>
-              <p className="flex items-center gap-2">
-                <Award size={15} /> Authorized Distributor
-              </p>
-            </div>
-          </div>
-          <div>
-            <h4 className="text-white font-black mb-5 uppercase tracking-widest text-xs">Garansi</h4>
-            <div className="space-y-3 text-sm">
-              <p className="flex items-center gap-2">
-                <ShieldCheck size={15} /> Sertifikat Resmi
-              </p>
-              <p className="flex items-center gap-2">
-                <CheckCircle size={15} /> Purna Jual
-              </p>
-            </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Ikuti Saya</h5>
+          <div className="flex items-center justify-center gap-4">
+            {[
+              {
+                icon: Instagram,
+                href: "https://www.instagram.com/stifinwithwarda",
+                color: "hover:bg-pink-600",
+                label: "Instagram",
+              },
+              {
+                icon: Facebook,
+                href: "https://www.facebook.com/share/18C3FaFb4t/",
+                color: "hover:bg-blue-600",
+                label: "Facebook",
+              },
+              { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
+              { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                aria-label={social.label}
+                className={`w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-white hover:-translate-y-1 hover:border-transparent hover:shadow-lg ${social.color}`}
+              >
+                <social.icon size={20} />
+              </a>
+            ))}
           </div>
         </div>
-      </div>
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center">
-        <p className="text-xs text-slate-600 uppercase tracking-widest">
-          © {new Date().getFullYear()} Musdalifa Warda — Kangen Water Indonesia
-        </p>
+
+        <div className="border-t border-gray-800/50 w-full max-w-2xl mx-auto mt-2">
+          © {new Date().getFullYear()} Musdalifa Warda - Kangen Water
+        </div>
       </div>
     </footer>
   );

@@ -96,7 +96,7 @@ export default function Solution() {
                 {s.icon}
               </div>
               <h3 className="text-lg font-black text-slate-900 mb-3">{s.title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-slate-500 text-md leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

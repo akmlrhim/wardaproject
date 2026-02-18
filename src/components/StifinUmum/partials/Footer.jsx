@@ -1,9 +1,9 @@
 import React from "react";
-import { Award, Instagram, Facebook, Youtube, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
+import { Instagram, Facebook, Youtube, Linkedin, Threads } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-4 pb-4 px-6 border-t border-gray-800 w-full">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-12 pb-4 px-6 border-t border-gray-800 w-full">
       <div className="w-full flex flex-col items-center justify-center text-center space-y-3">
         <div className="flex flex-col items-center gap-4">
           <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto mt-2">
@@ -12,17 +12,22 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center gap-4">
-          <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Ikuti Kami</h5>
+          <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Ikuti Saya</h5>
           <div className="flex items-center justify-center gap-4">
             {[
               {
                 icon: Instagram,
-                href: "https://www.instagram.com/stifinwithwarda",
+                href: "https://www.instagram.com/mompreneurwarda",
                 color: "hover:bg-pink-600",
                 label: "Instagram",
               },
-              { icon: Facebook, href: "#", color: "hover:bg-blue-600", label: "Facebook" },
-              { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
+              {
+                icon: Facebook,
+                href: "https://www.facebook.com/share/18C3FaFb4t/",
+                color: "hover:bg-blue-600",
+                label: "Facebook",
+              },
+              { icon: Threads, href: "#", color: "hover:bg-red-600", label: "Youtube" },
               { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
             ].map((social, index) => (
               <a
@@ -38,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800/50 w-full max-w-2xl mx-auto mt-2">
-          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} STIFIn. All rights reserved.</p>
+          © {new Date().getFullYear()} Musdalifa Warda - STIFin
         </div>
       </div>
     </footer>

@@ -25,14 +25,14 @@ export default function FAQ() {
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 className="w-full p-6 text-left flex justify-between items-center gap-4"
               >
-                <span className="font-bold text-slate-800 text-sm">{faq.q}</span>
+                <span className="font-bold text-slate-800 text-md">{faq.q}</span>
                 <ChevronDown
                   size={18}
                   className={`text-blue-600 shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
                 />
               </button>
               {openFaq === i && (
-                <div className="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                <div className="px-6 pb-6 text-slate-600 text-md leading-relaxed border-t border-slate-100 pt-4">
                   {faq.a}
                 </div>
               )}

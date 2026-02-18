@@ -1,21 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import Testimonial from "../partials/TestimonialSlide";
+import { useScroll } from "../../../hooks/useScroll";
 
 export default function Hero() {
-  const handleScrollTo = (e, id) => {
-    e.preventDefault();
-    const element = document.querySelector(id);
-    if (element) {
-      const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const { handleScrollTo } = useScroll();
 
   return (
     <section
@@ -47,7 +35,7 @@ export default function Hero() {
               <button
                 onClick={(e) => handleScrollTo(e, "#kontak")}
                 href="#kontak"
-                className="wa-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2"
+                className="wa-btn group bg-white text-emerald-800 px-6 py-3 rounded-xl font-bold text-base hover:bg-emerald-50 transition-all duration-300 shadow-xl inline-flex items-center justify-center gap-2 cursor-pointer"
               >
                 <MessageCircle
                   size={20}
