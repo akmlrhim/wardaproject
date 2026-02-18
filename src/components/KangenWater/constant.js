@@ -44,7 +44,7 @@ export const FAQS = [
   },
 ];
 
-export const WA_LINK = "https://wa.me/628123456789";
+export const WA_LINK = "https://wa.me/6283178257986";
 
 export const GLOBAL_STYLES = `
   .prose-ai p { margin-bottom: 12px; line-height: 1.7; }

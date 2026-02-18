@@ -3,15 +3,15 @@ import { IMAGES, WA_LINK } from "../constant.js";
 
 export default function Hero() {
   return (
-    <section className="pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden">
+    <section className="pt-24 lg:pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div
         className="absolute right-0 top-0 w-1/2 h-full bg-blue-700 hidden lg:block"
         style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center py-20 relative z-10">
-        <div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-12 lg:py-20 relative z-10">
+        <div className="order-1">
           <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white px-4 py-1.5 rounded-full text-xs font-bold mb-8 uppercase tracking-widest">
             <Award size={12} /> Official Enagic Distributor
           </div>
@@ -49,22 +49,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative hidden lg:block">
+        <div className="relative mt-12 lg:mt-0 order-2">
           <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 transform rotate-1 hover:rotate-0 transition-transform duration-500">
             <img
               src={IMAGES.group}
               alt="Kangen Water Team"
               className="w-full h-auto"
             />
-          </div>
-          <div className="absolute -bottom-4 -left-6 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-lg">
-              ★
-            </div>
-            <div>
-              <p className="text-xs font-black text-slate-900">Dipercaya jutaan keluarga</p>
-              <p className="text-xs text-slate-500">di seluruh dunia</p>
-            </div>
           </div>
         </div>
       </div>

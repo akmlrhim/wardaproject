@@ -1,19 +1,24 @@
 import React from "react";
+import ibuWarda from "../../../assets/ibu_warda.jpeg";
 import { Activity, HeartPulse, Wallet, AlertCircle, Quote } from "lucide-react";
 
 export function ProfileStrip() {
   return (
     <section className="py-12 bg-slate-900 border-b border-slate-800">
       <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
-        <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-          <span className="text-xl font-black text-white">MW</span>
+        <div className="w-24 h-24 rounded-2xl overflow-hidden shrink-0 shadow-lg border-2 border-blue-600/50">
+          <img
+            src={ibuWarda}
+            alt="Musdalifa Warda"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div>
           <p className="text-xs text-blue-400 font-bold uppercase tracking-widest mb-1">
             Distributor Resmi Enagic Indonesia
           </p>
           <h3 className="text-2xl font-black text-white mb-1">Musdalifa Warda</h3>
-          <p className="text-slate-400 italic text-sm max-w-xl">
+          <p className="text-white italic text-sm max-w-xl">
             "Teknologi ionisasi air teruji selama puluhan tahun, dipercaya oleh jutaan keluarga di seluruh dunia."
           </p>
         </div>
