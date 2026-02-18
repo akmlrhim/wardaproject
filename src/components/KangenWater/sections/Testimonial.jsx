@@ -23,7 +23,7 @@ const testimonials = [
 ];
 
 export default function Testimonial() {
-  const [selectedProof, useSelectedProof] = useState(null);
+  const [selectedProof, setSelectedProof] = useState(null);
 
   return (
     <section
@@ -61,13 +61,12 @@ export default function Testimonial() {
             Hasil yang Dirasakan Pengguna
           </p>
 
-          {/* --- DAFTAR GAMBAR (SLIDER/GRID) --- */}
           <div className="flex overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar gap-5 lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0">
             {IMAGES.proofs.map((proof, i) => (
               <div
                 key={i}
-                onClick={() => setSelectedProof(proof)} // 1. Trigger saat diklik
-                className="card-hover group min-w-[200px] first:ml-4 last:mr-4 snap-center lg:min-w-0 lg:first:ml-0 lg:last:mr-0 cursor-pointer" // Tambahkan cursor-pointer
+                onClick={() => setSelectedProof(proof)}
+                className="card-hover group min-w-[200px] first:ml-4 last:mr-4 snap-center lg:min-w-0 lg:first:ml-0 lg:last:mr-0 cursor-pointer"
               >
                 <div className="rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-blue-200 transition-colors aspect-[3/4] bg-slate-200 relative">
                   <img
@@ -75,7 +74,6 @@ export default function Testimonial() {
                     alt={proof.title}
                     className="w-full h-full object-cover"
                   />
-                  {/* Overlay ikon mata saat hover (opsional) */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                     <span className="text-white opacity-0 group-hover:opacity-100 font-bold text-2xl">+</span>
                   </div>
@@ -88,49 +86,46 @@ export default function Testimonial() {
           <p className="text-center text-xs text-slate-400 mt-6 italic">
             * Hasil dapat bervariasi untuk setiap individu. Produk ini bukan obat medis.
           </p>
-
-          {/* --- POPUP (LIGHTBOX) --- */}
-          {selectedProof && (
-            <div
-              className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200"
-              onClick={() => setSelectedProof(null)} // Tutup jika background diklik
-            >
-              <div className="relative max-w-4xl w-full max-h-screen flex flex-col items-center">
-                {/* Tombol Close */}
-                <button
-                  onClick={() => setSelectedProof(null)}
-                  className="absolute -top-12 right-0 text-white hover:text-gray-300 p-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-8 h-8"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-
-                {/* Gambar Besar */}
-                <img
-                  src={selectedProof.url}
-                  alt={selectedProof.title}
-                  className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
-                  onClick={(e) => e.stopPropagation()} // Agar klik gambar tidak menutup modal
-                />
-
-                <p className="text-white font-medium mt-4 text-lg text-center">{selectedProof.title}</p>
-              </div>
-            </div>
-          )}
         </div>
       </div>
+
+      {selectedProof && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200"
+          onClick={() => setSelectedProof(null)}
+        >
+          <div className="relative max-w-4xl w-full max-h-screen flex flex-col items-center">
+            <button
+              onClick={() => setSelectedProof(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <img
+              src={selectedProof.url}
+              alt={selectedProof.title}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <p className="text-white font-medium mt-4 text-lg text-center">{selectedProof.title}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
