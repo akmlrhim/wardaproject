@@ -2,7 +2,7 @@ import { Award, CheckCircle, GraduationCap, MessageCircle, Users } from "lucide-
 
 export default function WhatYouGet() {
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-white to-gray-50/50">
+    <section className="py-16 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="mb-20">
           <div className="text-center mb-10">

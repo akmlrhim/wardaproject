@@ -70,7 +70,7 @@ export function Problem() {
   return (
     <section
       id="masalah"
-      className="py-24 bg-white"
+      className="py-24"
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="max-w-2xl mb-16">

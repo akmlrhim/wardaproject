@@ -72,7 +72,7 @@ export default function Solution() {
   return (
     <section
       id="solusi"
-      className="py-24 bg-white"
+      className="py-24"
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">

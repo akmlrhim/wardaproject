@@ -1,8 +1,8 @@
 import { Briefcase, GraduationCap, Heart, TrendingUp, Users } from "lucide-react";
 
 export default function TargetAudience() {
-	return (
-    <section className="py-16 px-6 bg-gradient-to-b from-white to-gray-50">
+  return (
+    <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Siapa yang Cocok?</h2>

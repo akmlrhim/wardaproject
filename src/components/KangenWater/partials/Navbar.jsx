@@ -15,10 +15,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-blue-100"
-          : "bg-white/50 backdrop-blur-sm border-b border-transparent"
+          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+          : "bg-white border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">

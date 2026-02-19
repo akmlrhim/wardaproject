@@ -28,7 +28,7 @@ export default function Testimonial() {
   return (
     <section
       id="testimoni"
-      className="py-24 bg-slate-50"
+      className="py-24"
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
