@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg">
               <Droplets className="text-white w-5 h-5" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-blue-900">Kangen Water</span>
+            <span className="text-xl font-bold tracking-tight text-blue-900">KangenWater</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -66,30 +66,39 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile  */}
       <div
-        className={`md:hidden absolute w-full bg-white border-b border-blue-50 transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100 shadow-xl" : "max-h-0 opacity-0 overflow-hidden"
+        className={`md:hidden absolute w-full bg-white border-b border-gray-100 transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="px-6 py-6 space-y-4">
+        <div className="px-6 py-4 space-y-2 shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              onClick={(e) => handleScrollTo(e, link.href)}
-              className="block text-slate-600 hover:text-blue-600 hover:bg-blue-50 font-bold py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-blue-600 cursor-pointer"
+              onClick={(e) => {
+                handleScrollTo(e, link.href);
+                setIsOpen(false);
+              }}
+              className="block text-gray-600 hover:text-emerald-600 font-medium py-2 border-b border-gray-50 last:border-0 cursor-pointer"
             >
               {link.name}
             </a>
           ))}
 
-          <button
-            onClick={(e) => handleScrollTo(e, "#kontak")}
-            className="w-full mt-4 bg-blue-600 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-blue-700 inline-flex justify-center items-center gap-2 shadow-lg shadow-blue-200"
-          >
-            <MessageCircle size={20} />
-            Chat WhatsApp
-          </button>
+          <div className="pt-4">
+            <button
+              onClick={(e) => {
+                handleScrollTo(e, "#kontak");
+                setIsOpen(false);
+              }}
+              className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-sm font-semibold hover:bg-blue-700 inline-flex justify-center items-center gap-2"
+            >
+              <MessageCircle size={20} />
+              Chat WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </nav>

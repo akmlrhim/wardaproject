@@ -18,7 +18,7 @@ export default function CTA() {
         <a
           href={WA_LINK}
           target="_blank"
-          className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-base shadow-xl inline-flex items-center gap-2 hover:bg-blue-50 transition-all hover:-translate-y-1"
+          className="sm:text-lg text-xs bg-white text-blue-700 px-4 py-3 rounded-xl font-bold text-base shadow-xl inline-flex items-center gap-2 hover:bg-blue-50 transition-all hover:-translate-y-1 whitespace-nowrap"
         >
           SAYA MAU HIDUP SEHAT & MANDIRI FINANSIAL! <ChevronRight size={18} />
         </a>

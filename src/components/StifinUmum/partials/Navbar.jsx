@@ -65,6 +65,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile  */}
       <div
         className={`md:hidden absolute w-full bg-white border-b border-gray-100 transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"

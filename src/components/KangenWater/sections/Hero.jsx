@@ -6,8 +6,8 @@ export default function Hero() {
   const { handleScrollTo } = useScroll();
   return (
     <section
-      className="pt-24 lg:pt-16 min-h-screen flex items-center bg-blue-600 relative overflow-hidden"
-      id="hero"
+      className="min-h-screen flex items-center bg-blue-600 relative overflow-hidden"
+      id="beranda"
     >
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div
