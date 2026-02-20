@@ -27,7 +27,7 @@ export default function Navbar() {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center shadow-blue-200 shadow-lg">
+            <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center">
               <Droplets className="text-white w-5 h-5" />
             </div>
             <span className="text-xl font-bold tracking-tight text-blue-900">KangenWater</span>

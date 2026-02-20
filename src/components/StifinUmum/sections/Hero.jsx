@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden min-h-screen flex items-center pt-24 sm:pt-36"
+      className="relative overflow-hidden min-h-screen flex items-center pt-24 sm:pt-18"
       id="beranda"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800" />
@@ -28,7 +28,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-10">
           <div className="text-white">
             <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 text-emerald-200 px-4 py-1.5 rounded-full text-xs font-medium mb-6 uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
               Metode Ilmiah Berbasis Genetik
             </div>
 
