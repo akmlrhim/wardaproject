@@ -94,15 +94,7 @@ export default function Testimoni() {
               <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
                 "
               </div>
-              <div className="flex gap-1 mb-3">
-                {[...Array(testi.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
+
               <p className="text-gray-700 mb-4 leading-relaxed text-sm italic">"{testi.text}"</p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-base">

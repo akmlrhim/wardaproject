@@ -1,11 +1,9 @@
 import { useState } from "react";
 import promotorImg from "../../../assets/ibu_warda.jpeg";
-import testimonial1 from "../../../assets/testimoni/1.mp4";
-import testimonial2 from "../../../assets/testimoni/2.jpeg";
-import testimonial3 from "../../../assets/testimoni/3.jpeg";
-import testimonial4 from "../../../assets/testimoni/4.jpeg";
-import testimonial5 from "../../../assets/testimoni/5.jpeg";
-import testimonial6 from "../../../assets/testimoni/6.jpeg";
+import testi1 from "../../../assets/testimoni/3.jpeg";
+import testi2 from "../../../assets/testimoni/4.jpeg";
+import testi3 from "../../../assets/stifin/1.jpeg";
+
 import sertifikatImg from "../../../assets/sertifikat.jpg";
 import { ChevronLeft, ChevronRight, CheckCircle, Award, X, ZoomIn } from "lucide-react";
 
@@ -14,12 +12,9 @@ export default function Promotor() {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
   const activityMedia = [
-    { id: 1, src: testimonial1, type: "video" },
-    { id: 2, src: testimonial2, type: "image" },
-    { id: 3, src: testimonial3, type: "image" },
-    { id: 4, src: testimonial4, type: "image" },
-    { id: 5, src: testimonial5, type: "image" },
-    { id: 6, src: testimonial6, type: "image" },
+    { id: 1, src: testi1, type: "image" },
+    { id: 2, src: testi2, type: "image" },
+    { id: 3, src: testi3, type: "image" },
   ];
 
   const nextSlide = (e) => {
@@ -49,7 +44,7 @@ export default function Promotor() {
 
   return (
     <>
-      <section className="py-16 px-4 md:px-6">
+      <section className="py-16 sm:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 rounded-3xl shadow-2xl overflow-hidden border border-emerald-700/50">
             <div className="grid lg:grid-cols-2 min-h-[500px]">
@@ -85,7 +80,11 @@ export default function Promotor() {
                         </div>
                         <div className="flex items-center gap-2 justify-center sm:justify-start text-emerald-100/90 text-sm">
                           <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
-                          200++ Peserta Ditangani
+                          Telah menangani 200++ anak
+                        </div>
+                        <div className="flex items-center gap-2 justify-center sm:justify-start text-emerald-100/90 text-sm">
+                          <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
+                          Fokus pada analisis potensi & arahan praktis untuk orang tua
                         </div>
                       </div>
 
@@ -97,7 +96,7 @@ export default function Promotor() {
                           size={16}
                           className="text-yellow-400"
                         />
-                        Lihat Sertifikat
+                        STIFIn Certified Consultant
                       </button>
                     </div>
                   </div>

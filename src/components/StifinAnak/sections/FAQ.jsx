@@ -11,7 +11,7 @@ export default function FAQ() {
   const faqData = [
     {
       q: "Usia berapa tes ini cocok?",
-      a: "Direkomendasikan mulai usia 2 tahun hingga dewasa. Tidak ada batas usia maksimal.",
+      a: "Direkomendasikan untuk anak usia 5–12 tahun (bisa lebih luas).",
     },
     {
       q: "Apakah hasil bisa berubah?",
@@ -22,16 +22,8 @@ export default function FAQ() {
       a: "IQ mengukur kemampuan kognitif, STIFIn mengungkap cara berpikir alami dan potensi genetik.",
     },
     {
-      q: "Apakah ada diskon untuk rombongan?",
-      a: "Ada, untuk minimal 3 orang (keluarga/teman) mendapat harga spesial Rp 550.000/orang.",
-    },
-    {
-      q: "Berapa lama prosesnya?",
-      a: "Hasil keluar maksimal 15 menit dan bisa langsung konsultasi ke promotornya",
-    },
-    {
-      q: "Apakah bisa online?",
-      a: "Tidak, harus tatap muka (offline)",
+      q: "Apakah ada diskon untuk keluarga?",
+      a: "Ada, untuk minimal 3 orang.",
     },
   ];
 

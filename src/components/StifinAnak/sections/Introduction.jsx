@@ -4,7 +4,7 @@ import { Brain, CheckCircle2, ClipboardList, Fingerprint, PlayCircle, ShieldChec
 export default function Introduction() {
   return (
     <div className="min-h-screen text-slate-800 pb-20">
-      <section className="relative bg-white py-16 px-6 lg:px-8">
+      <section className="relative bg-white py-16 sm:py-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="md:text-3xl text-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
             15 Menit untuk Mengetahui Arah <span className="text-emerald-600">Potensi Anak Seumur Hidup</span>
@@ -32,7 +32,7 @@ export default function Introduction() {
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-8">
+      <section className="py-16 sm:py-24 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="md:text-3xl text-lg font-bold text-slate-900">Mengapa Memilih Tes Ini?</h2>

@@ -1,48 +1,50 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 export function Footer() {
-  return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-12 pb-4 px-6 border-t border-gray-800 w-full">
-      <div className="w-full flex flex-col items-center justify-center text-center space-y-3">
-        <div className="flex flex-col items-center gap-4">
-          <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto mt-2">
-            Raih kesehatan optimal dan kebebasan finansial bersama teknologi ionisasi air Enagic Jepang.
-          </p>
-        </div>
+  const socialLink = [
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/mompreneurwarda",
+      color: "hover:bg-pink-600",
+      label: "Instagram",
+    },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/18C3FaFb4t/",
+      color: "hover:bg-blue-600",
+      label: "Facebook",
+    },
+    { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
+    { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
+  ];
 
-        <div className="flex flex-col items-center gap-4">
-          <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Ikuti Saya</h5>
-          <div className="flex items-center justify-center gap-4">
-            {[
-              {
-                icon: Instagram,
-                href: "https://www.instagram.com/stifinwithwarda",
-                color: "hover:bg-pink-600",
-                label: "Instagram",
-              },
-              {
-                icon: Facebook,
-                href: "https://www.facebook.com/share/18C3FaFb4t/",
-                color: "hover:bg-blue-600",
-                label: "Facebook",
-              },
-              { icon: Youtube, href: "#", color: "hover:bg-red-600", label: "Youtube" },
-              { icon: Linkedin, href: "#", color: "hover:bg-blue-700", label: "LinkedIn" },
-            ].map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                aria-label={social.label}
-                className={`w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-white hover:-translate-y-1 hover:border-transparent hover:shadow-lg ${social.color}`}
-              >
-                <social.icon size={20} />
-              </a>
-            ))}
+  return (
+    <footer className="bg-gray-900 text-white py-12 px-6 border-t border-gray-800">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col items-center text-center space-y-8">
+          {/* Social Media Section */}
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">Ikuti Saya</span>
+            <div className="flex items-center gap-3">
+              {socialLink.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 transition-colors duration-200 hover:text-white hover:bg-gray-700"
+                >
+                  <social.icon size={18} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800/50 w-full max-w-2xl mx-auto mt-2">
-          © {new Date().getFullYear()} Musdalifa Warda - Kangen Water
+        {/* Divider */}
+        <div className="border-t border-gray-800 mt-10 pt-6">
+          <p className="text-center text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Musdalifa Warda - STIFin
+          </p>
         </div>
       </div>
     </footer>

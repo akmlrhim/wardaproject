@@ -4,7 +4,7 @@ import { CheckCircle, XCircle, Lightbulb, Target, BookOpen, Compass } from "luci
 export default function Problem() {
   return (
     <div className="w-full bg-slate-50 text-slate-800">
-      <section className="py-12 md:py-20 px-4 md:px-6 max-w-5xl mx-auto">
+      <section className="py-16 md:py-24 px-4 md:px-6 max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-lg md:text-3xl font-extrabold text-slate-800 mb-4 md:mb-5 tracking-tight">
             Pernahkah Anda Membayangkan Ini?
@@ -36,7 +36,7 @@ export default function Problem() {
         </div>
       </section>
 
-      <section className="py-6 md:py-16 px-4 md:px-6 bg-white">
+      <section className="py-16 sm:py-24 px-4 md:px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
@@ -115,7 +115,7 @@ export default function Problem() {
         </div>
       </section>
 
-      <section className="py-8 px-4 md:px-6 max-w-7xl mx-auto">
+      <section className="py-16 sm:py-24 px-4 md:px-6 max-w-7xl mx-auto">
         <h2 className="text-xl md:text-3xl font-extrabold text-center text-slate-800 mb-4 md:mb-5 tracking-tight">
           Bayangkan Jika Anda Sudah Tahu Ini Sejak Sekarang...
         </h2>

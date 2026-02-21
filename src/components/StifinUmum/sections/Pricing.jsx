@@ -3,6 +3,14 @@ import { useScroll } from "../../../hooks/useScroll";
 
 export default function Pricing() {
   const { handleScrollTo } = useScroll();
+
+  const lists = [
+    "Menemukan jati dirimu yang sesungguhnya",
+    "Menentukan cara belajar efektif & arah karier tepat",
+    "Mengenali karakter pasangan untuk hubungan harmonis",
+    "Mengelola tim bisnis sesuai karakter & potensi alami",
+  ];
+
   return (
     <>
       <section className="py-16 px-6 bg-gradient-to-b from-white to-emerald-50/50">
@@ -19,12 +27,7 @@ export default function Pricing() {
               </p>
 
               <div className="space-y-4">
-                {[
-                  "Menemukan jati dirimu yang sesungguhnya",
-                  "Menentukan cara belajar efektif & arah karier tepat",
-                  "Mengenali karakter pasangan untuk hubungan harmonis",
-                  "Mengelola tim bisnis sesuai karakter & potensi alami",
-                ].map((item, idx) => (
+                {lists.map((item, idx) => (
                   <div
                     key={idx}
                     className="flex items-start gap-3"

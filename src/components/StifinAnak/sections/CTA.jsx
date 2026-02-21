@@ -1,10 +1,9 @@
+import React from "react";
 import { MessageCircle } from "lucide-react";
-
 export default function CTA() {
   const handleWhatsApp = () => {
     const phoneNumber = "6283178257986";
-    const message =
-      "Halo bu Warda 👋\nSaya sudah baca penjelasan Tes STIFIn di website dan tertarik untuk daftar.\nBoleh minta info lanjutan mengenai pendaftarannya? Terima kasih 😊";
+    const message = `Halo bu Warda, saya ingin mengetahui lebih lanjut tentang stifin`;
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -30,21 +29,17 @@ export default function CTA() {
       <div className="relative max-w-3xl mx-auto text-center text-white">
         <div className="mb-8">
           <h2 className="text-2xl md:text-4xl font-bold mb-3 leading-tight">
-            Jangan Biarkan Masa Depanmu <br />
-            Ditentukan oleh Coba-Coba
+            Tes ini hanya 15 menit, tapi dampaknya seumur hidup.
           </h2>
           <p className="text-sm text-emerald-100 font-light max-w-xl mx-auto leading-relaxed">
-            Semakin cepat potensi dikenali, semakin besar peluang hidup sesuai kekuatan diri. Investasi terbaik adalah
-            investasi untuk memahami diri sendiri.
+            Bandingkan dengan biaya sekolah, les, dan kuliah senilai jutaan rupiah yang berisiko salah arah. Jangan
+            biarkan masa depan anak menjadi kacau. Semakin cepat potensi dikenali, semakin besar peluang anak untuk
+            tumbuh sesuai dengan kekuatannya.
           </p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-xl transform transition-all hover:scale-[1.01]">
-          <h3 className="text-xl md:text-2xl font-bold mb-2">Siap Menemukan Potensi Terbaikmu?</h3>
-          <p className="text-sm mb-6 text-emerald-50 max-w-lg mx-auto">
-            Hubungi kami sekarang. Ambil langkah pertama menuju kesuksesan yang sesuai dengan jati dirimu yang
-            sesungguhnya.
-          </p>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-xl">
+          <h3 className="text-xl md:text-2xl font-bold mb-2">Hubungi Promotor via WhatsApp sekarang</h3>
 
           <button
             onClick={handleWhatsApp}

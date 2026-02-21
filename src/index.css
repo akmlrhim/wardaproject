@@ -3,7 +3,7 @@
 
 @layer base {
   body {
-    font-family: "Manrope", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   .hide-scrollbar::-webkit-scrollbar {
