@@ -23,14 +23,6 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-12 lg:py-20 relative z-10">
         <div className="order-1">
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 text-blue-100 px-4 py-1.5 rounded-full text-xs font-bold mb-6 uppercase tracking-widest">
-            <Award
-              size={12}
-              className="text-cyan-300"
-            />
-            Official Enagic Distributor
-          </div>
-
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
             Transformasi Total Dimulai dari
             <br />

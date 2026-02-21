@@ -2,6 +2,9 @@ import { ChevronRight } from "lucide-react";
 import { WA_LINK } from "../constant";
 
 export default function CTA() {
+  const message = "Halo bu Warda, saya ingin mengetahui lebih lanjut tentang kangen water";
+  const finalWaLink = `${WA_LINK}${WA_LINK.includes("?") ? "&" : "?"}text=${encodeURIComponent(message)}`;
+
   return (
     <section
       className="py-16 bg-blue-600 text-center px-4"
@@ -16,7 +19,7 @@ export default function CTA() {
           <span className="text-blue-200">terhidrasi dan sejahtera.</span>
         </h2>
         <a
-          href={WA_LINK}
+          href={finalWaLink}
           target="_blank"
           className="sm:text-lg text-xs bg-white text-blue-700 px-4 py-3 rounded-xl capitalize font-bold text-base shadow-xl inline-flex items-center gap-2 hover:bg-blue-50 transition-all hover:-translate-y-1 whitespace-nowrap"
         >

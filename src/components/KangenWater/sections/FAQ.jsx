@@ -10,7 +10,7 @@ export default function FAQ() {
       id="faq"
       className="py-24"
     >
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">FAQ</p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Pertanyaan yang Sering Diajukan</h2>

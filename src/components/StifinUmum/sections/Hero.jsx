@@ -16,21 +16,14 @@ export default function Hero() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl" />
-
         <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-3xl" />
-
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-400/5 rounded-full blur-3xl" />
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:80px_80px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-10">
           <div className="text-white">
-            <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 text-emerald-200 px-4 py-1.5 rounded-full text-xs font-medium mb-6 uppercase tracking-wider">
-              Metode Ilmiah Berbasis Genetik
-            </div>
-
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
               Temukan Potensi Terbaikmu <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 via-teal-200 to-emerald-100">
@@ -42,17 +35,6 @@ export default function Hero() {
               Bukan salah kamu kalau kamu ngerasa gak kenal sama diri sendiri. Kamu hanya perlu tahu tipe kecerdasanmu
               dengan metode ilmiah berbasis genetik.
             </p>
-
-            <div className="flex flex-wrap gap-2 mb-8">
-              {["Akurat 99%", "15 Menit", "Certified", "Lifetime Access"].map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-white/5 border border-white/10 text-slate-300 text-xs font-medium px-3 py-1.5 rounded-lg backdrop-blur-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button

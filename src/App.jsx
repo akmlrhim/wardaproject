@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Stifin from "./pages/business/Stifin";
+import StifinAnak from "./pages/business/StifinAnak";
 import StifinUmum from "./pages/business/StifinUmum";
 import KangenWater from "./pages/business/KangenWater";
 import NotFound from "./pages/NotFound";
@@ -20,7 +20,7 @@ function App() {
 
         <Route
           path="/stifin-anak"
-          element={<Stifin />}
+          element={<StifinAnak />}
         />
 
         <Route
