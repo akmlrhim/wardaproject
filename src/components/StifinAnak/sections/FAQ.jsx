@@ -48,7 +48,7 @@ export default function FAQ() {
                 onClick={() => toggleFaq(idx)}
                 className="w-full p-4 text-left flex justify-between items-start transition group"
               >
-                <span className="font-bold text-base text-gray-900 pr-3 leading-snug">{faq.q}</span>
+                <span className="font-bold text-sm text-gray-900 pr-3 leading-snug">{faq.q}</span>
                 <ChevronDown
                   className={`text-gray-400 transition-transform flex-shrink-0 mt-0.5 ${openFaq === idx ? "rotate-180" : ""}`}
                   size={20}

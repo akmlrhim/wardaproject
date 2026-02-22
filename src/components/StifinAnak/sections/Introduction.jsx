@@ -3,8 +3,14 @@ import { Brain, CheckCircle2, ClipboardList, Fingerprint, PlayCircle, ShieldChec
 
 export default function Introduction() {
   return (
-    <div className="min-h-screen text-slate-800 pb-20">
-      <section className="relative bg-white py-16 sm:py-24 px-6 lg:px-8">
+    <div
+      className="min-h-screen text-slate-800"
+      id=""
+    >
+      <section
+        className="relative bg-white py-16 sm:py-24 px-6 lg:px-8"
+        id="tentang"
+      >
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="md:text-3xl text-lg font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
             15 Menit untuk Mengetahui Arah <span className="text-emerald-600">Potensi Anak Seumur Hidup</span>
@@ -12,21 +18,16 @@ export default function Introduction() {
 
           <div className="relative mx-auto max-w-4xl mt-12">
             <div className="aspect-video bg-slate-100 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative group cursor-pointer">
-              <img
-                src="/api/placeholder/1200/675"
-                alt="Video Thumbnail"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
-                <a
-                  href="https://youtu.be/5nsR8SkYdv0"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white/90 p-5 rounded-full shadow-xl transform group-hover:scale-110 transition-transform"
-                >
-                  <PlayCircle className="w-12 h-12 text-emerald-600" />
-                </a>
-              </div>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube-nocookie.com/embed/5nsR8SkYdv0?si=R4Z9hJR9_70pYgk_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
