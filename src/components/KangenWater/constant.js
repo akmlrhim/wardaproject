@@ -5,6 +5,9 @@ import alat3 from "../../assets/kangenwater/alat/3.jpg";
 
 import tekanandarahturun from "../../assets/kangenwater/testimoni/tekanandarahturun.jpg";
 import batukpilek from "../../assets/kangenwater/testimoni/batukpilek.jpg";
+import bakbermasalah from "../../assets/kangenwater/testimoni/bakbermasalah.jpg";
+import batuginjal from "../../assets/kangenwater/testimoni/batuginjal.jpg";
+import guladarahturun from "../../assets/kangenwater/testimoni/guladarahturun.jpg";
 
 export const IMAGES = {
   group: heroImg,
@@ -17,6 +20,18 @@ export const IMAGES = {
     {
       url: batukpilek,
       title: "Batuk Pilek teratasi",
+    },
+    {
+      url: bakbermasalah,
+      title: "BAK Bermasalah",
+    },
+    {
+      url: batuginjal,
+      title: "Batu Ginjal",
+    },
+    {
+      url: guladarahturun,
+      title: "Gula Darah Turun",
     },
   ],
 };

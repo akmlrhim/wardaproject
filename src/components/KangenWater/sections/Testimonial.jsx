@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { IMAGES } from "../constant";
 
 const testimonials = [
@@ -24,6 +24,21 @@ const testimonials = [
 
 export default function Testimonial() {
   const [selectedProof, setSelectedProof] = useState(null);
+
+  const sliderRef = useRef(null);
+  const isSlider = IMAGES?.proofs?.length > 4;
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
 
   return (
     <section
@@ -61,29 +76,84 @@ export default function Testimonial() {
             Hasil yang Dirasakan Pengguna
           </p>
 
-          <div className="flex justify-center flex-nowrap lg:flex-wrap overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar gap-5 lg:overflow-visible lg:pb-0">
-            {IMAGES.proofs.map((proof, i) => (
-              <div
-                key={i}
-                onClick={() => setSelectedProof(proof)}
-                className="card-hover group flex-none w-[200px] lg:w-[calc(25%-1.25rem)] lg:max-w-[280px] snap-center cursor-pointer"
+          <div className="relative group max-w-5xl mx-auto">
+            {isSlider && (
+              <button
+                onClick={scrollLeft}
+                className="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-xl border border-slate-100 rounded-full items-center justify-center text-slate-600 hover:text-blue-600 hover:bg-slate-50 opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
-                <div className="rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-blue-200 transition-colors aspect-[3/4] bg-slate-200 relative">
-                  <img
-                    src={proof.url}
-                    alt={proof.title}
-                    className="w-full h-full object-cover"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2.5}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                    <span className="text-white opacity-0 group-hover:opacity-100 font-bold text-2xl">+</span>
+                </svg>
+              </button>
+            )}
+
+            <div
+              ref={sliderRef}
+              className={`flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar ${
+                isSlider
+                  ? "flex-nowrap justify-start scroll-smooth"
+                  : "flex-nowrap lg:flex-wrap justify-center lg:overflow-visible lg:pb-0"
+              }`}
+            >
+              {IMAGES.proofs.map((proof, i) => (
+                <div
+                  key={i}
+                  onClick={() => setSelectedProof(proof)}
+                  className={`card-hover group flex-none snap-center cursor-pointer ${
+                    isSlider ? "w-[200px] lg:w-[240px]" : "w-[200px] lg:w-[calc(25%-1.25rem)] lg:max-w-[280px]"
+                  }`}
+                >
+                  <div className="rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-blue-200 transition-colors aspect-[3/4] bg-slate-200 relative">
+                    <img
+                      src={proof.url}
+                      alt={proof.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="text-white opacity-0 group-hover:opacity-100 font-bold text-3xl">+</span>
+                    </div>
                   </div>
+                  <p className="text-center font-bold text-xs text-slate-700 mt-3 px-2 line-clamp-2">{proof.title}</p>
                 </div>
-                <p className="text-center font-bold text-xs text-slate-700 mt-3 px-2">{proof.title}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {isSlider && (
+              <button
+                onClick={scrollRight}
+                className="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-xl border border-slate-100 rounded-full items-center justify-center text-slate-600 hover:text-blue-600 hover:bg-slate-50 opacity-0 group-hover:opacity-100 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2.5}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
 
-          <p className="text-center text-xs text-slate-400 mt-6 italic">
+          <p className="text-center text-xs text-slate-400 mt-8 italic">
             * Hasil dapat bervariasi untuk setiap individu. Produk ini bukan obat medis.
           </p>
         </div>
