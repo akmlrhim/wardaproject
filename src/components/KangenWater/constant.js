@@ -1,10 +1,11 @@
+import heroImg from "../../assets/kangenwater/hero.jpeg";
+import alat1 from "../../assets/kangenwater/alat/1.jpg";
+import alat2 from "../../assets/kangenwater/alat/2.jpg";
+import alat3 from "../../assets/kangenwater/alat/3.jpg";
+
 export const IMAGES = {
-  group: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770694607344-huplt9.jpg",
-  machines: [
-    "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770694697151-x8pukm.jpg",
-    "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770694716350-fsszev.jpg",
-    "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770694757453-jgz005.jpg",
-  ],
+  group: heroImg,
+  machines: [alat1, alat2, alat3],
   proofs: [
     {
       url: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770697535553-f14ha4.jpg",
