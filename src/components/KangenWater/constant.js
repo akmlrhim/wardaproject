@@ -3,24 +3,19 @@ import alat1 from "../../assets/kangenwater/alat/1.jpg";
 import alat2 from "../../assets/kangenwater/alat/2.jpg";
 import alat3 from "../../assets/kangenwater/alat/3.jpg";
 
+import tekanandarahturun from "../../assets/kangenwater/testimoni/tekanandarahturun.jpg";
+import batukpilek from "../../assets/kangenwater/testimoni/batukpilek.jpg";
+
 export const IMAGES = {
   group: heroImg,
   machines: [alat1, alat2, alat3],
   proofs: [
     {
-      url: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770697535553-f14ha4.jpg",
-      title: "Masalah BAK Teratasi",
-    },
-    {
-      url: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770697416361-bo9nfl.jpg",
-      title: "Gula darah kembali normal",
-    },
-    {
-      url: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770695083829-nhcne1.jpg",
+      url: tekanandarahturun,
       title: "Tekanan darah turun",
     },
     {
-      url: "https://hehq4lncabahxdoc.public.blob.vercel-storage.com/1770695413990-07pc5i.jpg",
+      url: batukpilek,
       title: "Batuk Pilek teratasi",
     },
   ],

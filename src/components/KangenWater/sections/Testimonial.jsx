@@ -61,12 +61,12 @@ export default function Testimonial() {
             Hasil yang Dirasakan Pengguna
           </p>
 
-          <div className="flex overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar gap-5 lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0">
+          <div className="flex justify-center flex-nowrap lg:flex-wrap overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar gap-5 lg:overflow-visible lg:pb-0">
             {IMAGES.proofs.map((proof, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedProof(proof)}
-                className="card-hover group min-w-[200px] first:ml-4 last:mr-4 snap-center lg:min-w-0 lg:first:ml-0 lg:last:mr-0 cursor-pointer"
+                className="card-hover group flex-none w-[200px] lg:w-[calc(25%-1.25rem)] lg:max-w-[280px] snap-center cursor-pointer"
               >
                 <div className="rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-blue-200 transition-colors aspect-[3/4] bg-slate-200 relative">
                   <img
